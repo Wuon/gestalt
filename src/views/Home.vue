@@ -16,19 +16,46 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import HelloWorld from "@/components/HelloWorld.vue";
 import json from "@/quotes.json";
 
 @Component({
-  components: {
-    HelloWorld
-  }
+  components: {}
 })
 export default class Home extends Vue {
-  quotes: any = json.quotes;
+  quotes: [
+    {
+      id: number;
+      date: string;
+      owner: string;
+      msg: string;
+      context: string;
+    }
+  ] = json.quotes;
+
   cur: number = 1;
+
   length: number = this.quotes.length;
-  quote: any = this.quotes[0];
+
+  quote: {
+    id: number;
+    date: string;
+    owner: string;
+    msg: string;
+    context: string;
+  } = this.quotes[0];
+
+  constructor() {
+    super();
+    document.addEventListener("click", this.documentClick);
+  }
+
+  documentClick() {
+    console.log("hello");
+  }
+
+  beforeDestroy() {
+    document.removeEventListener("click", this.documentClick);
+  }
 }
 </script>
 
