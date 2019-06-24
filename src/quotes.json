@@ -3,6 +3,13 @@
         {
             "id": 1,
             "date": "06/23/2019",
+            "owner": "Daniel Wu",
+            "msg": "We both step and do not step in the same rivers. We are and are not.",
+            "context": "Reality is change and flow. We step into and out of the river as different beings."
+        },
+        {
+            "id": 2,
+            "date": "06/23/2019",
             "owner": "Anthony Fabian",
             "msg": "Fall down seven, get up eight.",
             "context": "Falling down n times only requires getting up n times, of course."
