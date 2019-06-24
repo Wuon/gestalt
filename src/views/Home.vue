@@ -1,7 +1,7 @@
 <template>
   <div class="quote-container">
     <div class="quote-top">
-      <p>{{cur}} / {{length}}</p>
+      <p>{{quote.id}} / {{length}}</p>
     </div>
     <div class="quote-middle">
       <h1>"{{quote.msg}}"</h1>
@@ -32,7 +32,7 @@ export default class Home extends Vue {
     }
   ] = json.quotes;
 
-  cur: number = 1;
+  cur: number = 0;
 
   length: number = this.quotes.length;
 
@@ -50,7 +50,12 @@ export default class Home extends Vue {
   }
 
   documentClick() {
-    console.log("hello");
+    if (this.cur + 1 >= this.quotes.length) {
+      this.cur = 0;
+    } else {
+      this.cur += 1;
+    }
+    this.quote = this.quotes[this.cur];
   }
 
   beforeDestroy() {
