@@ -7,13 +7,14 @@
 <style>
 body {
   margin: 0;
+  background: linear-gradient(45deg, #476892, #59355d);
 }
 #app {
   font-family: "Gilroy", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #fafafa;
   margin: 0px;
 }
 </style>
