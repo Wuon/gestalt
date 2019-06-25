@@ -1,5 +1,5 @@
 <template>
-  <div class="quote-container">
+  <div class="quote-container" v-touch:tap="nextQuote">
     <div class="quote-top">
       <p>{{quote.id}} / {{length}}</p>
     </div>
@@ -15,11 +15,11 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import json from '@/quotes.json';
+import { Component, Vue } from "vue-property-decorator";
+import json from "@/quotes.json";
 
 @Component({
-  components: {},
+  components: {}
 })
 export default class Home extends Vue {
   quotes: {
@@ -42,22 +42,13 @@ export default class Home extends Vue {
     context: string;
   } = this.quotes[0];
 
-  constructor() {
-    super();
-    document.addEventListener('click', this.documentClick);
-  }
-
-  documentClick() {
+  nextQuote() {
     if (this.cur + 1 >= this.quotes.length) {
       this.cur = 0;
     } else {
       this.cur += 1;
     }
     this.quote = this.quotes[this.cur];
-  }
-
-  beforeDestroy() {
-    document.removeEventListener('click', this.documentClick);
   }
 }
 </script>
@@ -75,5 +66,11 @@ export default class Home extends Vue {
 .quote-top,
 .quote-bottom {
   padding: 25px;
+}
+@media only screen and (max-width: 1000px) {
+  .quote-container {
+    height: calc(100vh - 50px);
+    text-align: left;
+  }
 }
 </style>
