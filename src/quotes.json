@@ -13,6 +13,13 @@
             "owner": "Anthony Fabian",
             "msg": "Fall down seven, get up eight.",
             "context": "Falling down n times only requires getting up n times, of course."
+        },
+        {
+            "id": 3,
+            "date": "06/24/2019",
+            "owner": "Peter Lu",
+            "msg": "If you haven't failed it means you haven't tried hard enough.",
+            "context": "Go above and beyond and do something new. To be safe means to be afraid of failing."
         }
     ]
 }

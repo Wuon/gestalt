@@ -15,22 +15,20 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import json from "@/quotes.json";
+import { Component, Vue } from 'vue-property-decorator';
+import json from '@/quotes.json';
 
 @Component({
-  components: {}
+  components: {},
 })
 export default class Home extends Vue {
-  quotes: [
-    {
-      id: number;
-      date: string;
-      owner: string;
-      msg: string;
-      context: string;
-    }
-  ] = json.quotes;
+  quotes: {
+    id: number;
+    date: string;
+    owner: string;
+    msg: string;
+    context: string;
+  }[] = json.quotes;
 
   cur: number = 0;
 
@@ -46,7 +44,7 @@ export default class Home extends Vue {
 
   constructor() {
     super();
-    document.addEventListener("click", this.documentClick);
+    document.addEventListener('click', this.documentClick);
   }
 
   documentClick() {
@@ -59,7 +57,7 @@ export default class Home extends Vue {
   }
 
   beforeDestroy() {
-    document.removeEventListener("click", this.documentClick);
+    document.removeEventListener('click', this.documentClick);
   }
 }
 </script>
