@@ -16,31 +16,20 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import { Quote } from '@/abstracts/quote';
 import json from '@/quotes.json';
 
 @Component({
   components: {},
 })
 export default class Home extends Vue {
-  quotes: {
-    id: number;
-    date: string;
-    owner: string;
-    msg: string;
-    context: string;
-  }[] = json.quotes;
+  quotes: Quote[] = json.quotes;
 
   cur: number = 0;
 
   length: number = this.quotes.length;
 
-  quote: {
-    id: number;
-    date: string;
-    owner: string;
-    msg: string;
-    context: string;
-  } = this.quotes[0];
+  quote: Quote = this.quotes[0];
 
   mounted() {
     this.cur = Math.floor(Math.random() * Math.floor(this.length));
