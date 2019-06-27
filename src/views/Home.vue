@@ -15,11 +15,11 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import json from "@/quotes.json";
+import { Component, Vue } from 'vue-property-decorator';
+import json from '@/quotes.json';
 
 @Component({
-  components: {}
+  components: {},
 })
 export default class Home extends Vue {
   quotes: {
@@ -42,8 +42,13 @@ export default class Home extends Vue {
     context: string;
   } = this.quotes[0];
 
+  mounted() {
+    this.cur = Math.floor(Math.random() * Math.floor(this.length));
+    this.quote = this.quotes[this.cur];
+  }
+
   nextQuote() {
-    if (this.cur + 1 >= this.quotes.length) {
+    if (this.cur + 1 >= this.length) {
       this.cur = 0;
     } else {
       this.cur += 1;

@@ -20,6 +20,13 @@
             "owner": "Peter Lu",
             "msg": "If you haven't failed it means you haven't tried hard enough.",
             "context": "Go above and beyond and do something new. To be safe means to be afraid of failing."
+        },
+        {
+            "id": 4,
+            "date": "06/26/2019",
+            "owner": "Andrew Pratheepan",
+            "msg": "Done is better than perfect.",
+            "context": "Everyone wants to strive for perfection, but never forget the end goal. Time is a finite resource."
         }
     ]
 }
