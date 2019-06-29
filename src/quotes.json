@@ -27,6 +27,13 @@
             "owner": "Andrew Pratheepan",
             "msg": "Done is better than perfect.",
             "context": "Everyone wants to strive for perfection, but never forget the end goal. Time is a finite resource."
+        },
+        {
+            "id": 5,
+            "date": "06/28/2019",
+            "owner": "Song You",
+            "msg": "Most of the world will make decisions by either guessing or using their gut. They will be either lucky or wrong.",
+            "context": "When we guess, we move forward without all of the information that we may need to be successful."
         }
     ]
 }
